@@ -1,0 +1,17 @@
+{
+  "name": "wall-time-arithmetic",
+  "version": "0.1.0",
+  "description": "Adds and subtracts hours and minutes to a local wall-clock time, carrying across midnight and wrapping past 24 hours, without any date or timezone context.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
