@@ -26,3 +26,10 @@ This library deliberately ignores dates and timezones. It treats a day as exactl
 - Invalid time strings (`"24:00"`, `"12:60"`, `"noon"`) throw a `RangeError`.
 - Non-integer offsets throw a `TypeError`.
 - Offsets default to zero when omitted.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
